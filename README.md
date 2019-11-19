@@ -4,10 +4,9 @@
 ## 개발환경
 
 ### Editor: VSCODE
-### Front: HTML5, CSS3
-### Back: JS
-### Server: Node.js
-### DB: MariaDB
+### Front: HTML5, CSS3, JS
+### (Back) Server: Node.js
+### (Back) DB: MariaDB
 
 ## 개발방향 && 앞으로의 계획
 
