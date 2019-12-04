@@ -1,0 +1,25 @@
+{
+  "name": "2019webproject",
+  "version": "1.0.0",
+  "description": "?? ???",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soo-ss/2019_WAP_WebProject_Partition.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Soo-ss/2019_WAP_WebProject_Partition/issues"
+  },
+  "homepage": "https://github.com/Soo-ss/2019_WAP_WebProject_Partition#readme"
+}

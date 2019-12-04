@@ -1,3 +1,36 @@
+
+
+/*
+
+웹표준을 봐야할듯
+
+반응형 할때 width, height, top, bottom, left, right값이
+어떻게 되는지??
+
+auto값은 뭔지모르겠음 ex.height:auto
+
+.header_icon .header li 이런식으로 적는건 그냥 가독성인건지?
+
+반응형할때 padding, margin을 잘 안쓰는거같고 width를 이용해서 조절하는듯함
+
+반응형할때 overflow도 그닥 많이 안쓰는듯함
+
+원래 float속성이 있던것을 float속성을 none으로 줘서 조절하는듯함
+
+box-sizing값도 살펴보자
+
+container쓰는 목적??
+
+.nav > div처럼 > 알아봐야할듯
+
+영역을 하나 감싸고 해야 속성이 적용되는 이유?
+
+relative, absolute 알아보자
+
+margin, padding 아직도 헷갈림
+
+*/
+
 /* 레이아웃 */
 
 body{
@@ -26,8 +59,8 @@ body{
 }
 
 #contents .container{
-    border-right: 1px solid #dbdbdb;
-    border-left: 1px solid #dbdbdb;
+    /* border-right: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb; */
 }
 
 #cont_left{
@@ -58,33 +91,35 @@ body{
 /* 컨테이너 */
 .container{
     position: relative;
-    width:1200px; 
+    width:100%; 
     margin: 0 auto; 
     background: rgba(0,0,0,0);
 }
 
 /* 헤더 */
 .header{
-    height: 655px;
+    height: 600px;
 }
 
 /* 헤더에있는 헤더메뉴 */
 .header .header_menu{
-    text-align: center;
+    /* text-align: center; */
 
     /* 메뉴바 고정하기 */
+    /* span줘서 하면 될듯 */
     /* 헤더 높이값 조정해야 빈공간 안생김 */
     /* 반응형 만들기 어려움 */
-    /* position: fixed; */
+    
+    position: fixed;
     top: 0;
     right: 0;
-    /* background: linear-gradient(90deg, rgba(43, 14, 78, 1) 0%, rgba(19, 35, 87, 1) 100%); */
-    /* background: rgb(16, 5, 61); */
-    /* z-index: 10000; */
 
-    /* left: 1163, right: 50 */
-    /* padding-left: 863px;  */
-    /* padding-right: 350px; */
+    /* width값 주면 간단히 해결됨 */
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    background: linear-gradient(90deg, rgba(43, 14, 78, 1) 0%, rgba(19, 35, 87, 1) 100%);
+    z-index: 10000;
 }
 
 .header .header_menu a{
@@ -92,9 +127,10 @@ body{
     padding: 8px 0 6px 10px;
     display: inline-block;
 
+    padding-right: 25px;
     /* 전환효과 */
     transition: color 0.3s ease;
-    font-family: 'Vibes', cursive;
+    font-family: 'Nanum Gothic';
 }
 
 .header .header_menu a:hover{
@@ -389,10 +425,10 @@ body{
     width: 3px;
     height: 3px;
     border-radius: 50%;
-    background: #449ce2;
+    background: #ff4bf6;
     position: absolute;
     left: 0;
-    top: 6px;
+    top: 15px;
 }
 
 .notice1 .more{
@@ -478,11 +514,11 @@ body{
 
 .my-calendar .clicked-date {
     color: #fff;
-    border-radius: 25px;
+    border-radius: 50px;
     margin-top: 36px;
     float: left;
     width: 42%;
-    padding: 46px 0 26px;
+    padding: 36px 0 26px;
     background: rgb(255, 223, 39);
 }
 
@@ -591,7 +627,13 @@ body{
     text-align: center;
     font-size: 180px;
     font-family: 'Quicksand', sans-serif;
-    color: rgb(255, 255, 255);
+    color: #fff
+}
+
+.header_press h1{
+    text-align: center;
+    font-size: 80px;
+    color: #fff;
 }
 
 /* 해야 할 일 */
@@ -602,6 +644,24 @@ body{
     outline: none;
     font-size: 20px;
     height: 40px;
+}
+
+.js-toDoList{
+    margin: 20px 10px;
+}
+
+.js-toDoList button{
+    color:rgb(255, 110, 248);
+    width: 80px;
+    height: 30px;
+    border: 1px rgb(255, 118, 244) solid;
+    border-radius: 5px;
+    background: #fff;
+    margin: 5px;
+}
+
+.js-toDoList span {
+    padding-left: 10px;
 }
 
 
@@ -745,8 +805,91 @@ only screen and (min-resolution: 1.5dppx) {
     top: 8px;
 }
 
+/* =========== 채팅영역 ============ */
+
+/* 메인 */
+#chat_main {
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    background: #fff;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+}
+
+/* 채팅 영역 */
+#chat {
+    height: 90%;
+    width: 100%;
+    overflow-y: auto;
+    font-family: 'Nanum Gothic';
+    font-size: 20px;
+}
+
+/* 메시지를 입력해주세요 */
+#chat_main input[type="text"] {
+    border: none;
+}
+
+/* 채팅버튼 */
+#chat_main .chat_btn{
+    color:rgb(255, 110, 248);
+    width: 100px;
+    height: 30px;
+    border: 1px rgb(255, 118, 244) solid;
+    border-radius: 10px;
+    background: #fff;
+}
+
+/* 접속 알림 */
+.connect {
+    color: rgb(255, 77, 240);
+    width: 90%;
+    margin: auto;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#chat input[type="text"]{
+    border: none;
+}
+
+/* 접속 종료 알림 */
+.disconnect {
+    width: 90%;
+    margin: auto;
+    background-color: fff;
+    border: 1px rgb(255, 0, 0) solid;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 내가 보낸 메시지 */
+.me {
+    width: 90%;
+    margin: auto;
+    border: 1px rgb(255, 118, 244) solid;
+    background-color: fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* 상대방이 보낸 메시지 */
+.other {
+    width: 90%;
+    margin: auto;
+    border: 1px rgb(64, 248, 27) solid;
+    background-color: fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: left;
+}
+
 /* 라이트박스 */
-.square a {
+/* .square a {
     position: relative;
     overflow: hidden;
     float: left;
@@ -814,10 +957,10 @@ only screen and (min-resolution: 1.5dppx) {
 
 .square a:nth-child(10):hover img {
     filter: sepia(120%) hue-rotate(120deg);
-}
+} */
 
 /* 비디오 */
-.video {
+/* .video {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%;
@@ -826,7 +969,7 @@ only screen and (min-resolution: 1.5dppx) {
     position: absolute;
     width: 100%;
     height: 100%;
-}
+} */
 
 /* 푸터 */
 .footer {
@@ -969,6 +1112,14 @@ only screen and (min-resolution: 1.5dppx) {
 @media(max-width: 768px) {
     #cont_left {float: none; width: 100%;}
     #cont_center {border-left: 0;}
+
+    .header_clock h1{
+        font-size: 100px;
+    }
+
+    .header_press h1 {
+        font-size: 50px;
+    }
 }
 
 @media(max-width: 600px) {
